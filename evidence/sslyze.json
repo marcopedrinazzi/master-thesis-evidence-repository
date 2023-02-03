@@ -1,0 +1,14 @@
+{
+  "status": true,
+  "data": {
+    "Certificate not trusted by": [],
+    "Protocol setup": {
+      "Versions": {
+        "Supported versions": [
+          "tlsv1_2",
+          "tlsv1_3"
+        ]
+      }
+    }
+  }
+}
