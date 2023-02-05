@@ -1,0 +1,31 @@
+{
+  "status": true,
+  "data": {
+    "Details": {
+      "Listening services": {
+        "tcp": {
+          "80": {
+            "Details": "product: cloudflare",
+            "Possible vulnerabilities": "No other info available"
+          },
+          "443": {
+            "Details": "product: cloudflare",
+            "Possible vulnerabilities": "No other info available"
+          }
+        },
+        "udp": {
+          "Output": "All ports are closed or filtered"
+        }
+      },
+      "Operating System": {
+        "Possible vulnerabilities": {},
+        "Details": "media device: Crestron, embedded"
+      }
+    },
+    "Summary of vulnerabilities found": {
+      "os": 0,
+      "tcp": 0,
+      "udp": 0
+    }
+  }
+}
