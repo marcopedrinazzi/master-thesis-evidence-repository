@@ -377,9 +377,6 @@
               }
             }
           }
-        },
-        "udp": {
-          "Output": "All ports are closed or filtered"
         }
       },
       "Operating System": {
@@ -1190,8 +1187,7 @@
     },
     "Summary of vulnerabilities found": {
       "os": 100,
-      "tcp": 46,
-      "udp": 0
+      "tcp": 46
     }
   }
 }

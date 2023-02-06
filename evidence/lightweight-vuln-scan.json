@@ -4,28 +4,821 @@
     "Details": {
       "Listening services": {
         "tcp": {
-          "80": {
-            "Details": "product: cloudflare",
-            "Possible vulnerabilities": "No other info available"
-          },
           "443": {
             "Details": "product: cloudflare",
             "Possible vulnerabilities": "No other info available"
           }
-        },
-        "udp": {
-          "Output": "All ports are closed or filtered"
         }
       },
       "Operating System": {
-        "Possible vulnerabilities": {},
-        "Details": "media device: Crestron, embedded"
+        "Possible vulnerabilities": {
+          "CVE-2021-45868": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45868",
+            "Description": "In the Linux kernel before 5.15.3, fs/quota/quota_tree.c does not validate the block number in the quota tree (on disk). This can, for example, lead to a kernel/locking/rwsem.c use-after-free if there is a corrupted quota file.",
+            "Score": {
+              "CVSSv2": 4.3,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2021-4197": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4197",
+            "Description": "An unprivileged write to the file handler flaw in the Linux kernel's control groups and namespaces subsystem was found in the way users have access to some less privileged process that are controlled by cgroups and have higher privileged parent process. It is actually both for cgroup2 and cgroup1 versions of control groups. A local user could use this flaw to crash the system or escalate their privileges on the system.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2022-28356": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28356",
+            "Description": "In the Linux kernel before 5.17.1, a refcount leak bug was found in net/llc/af_llc.c.",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2022-42703": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42703",
+            "Description": "mm/rmap.c in the Linux kernel before 5.19.7 has a use-after-free related to leaf anon_vma double reuse.",
+            "Score": {
+              "CVSSv2": "N.A.",
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2012-2375": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2375",
+            "Description": "CVE-2012-2375 kernel: incomplete fix for CVE-2011-4131",
+            "Score": {
+              "CVSSv2": 4.6,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2022-1016": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1016",
+            "Description": "A flaw was found in the Linux kernel in net/netfilter/nf_tables_core.c:nft_do_chain, which can cause a use-after-free. This issue needs to handle 'return' with proper preconditions, as it can lead to a kernel information leak problem caused by a local, unprivileged attacker.",
+            "Score": {
+              "CVSSv2": "N.A.",
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2022-0168": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0168",
+            "Description": "A denial of service (DOS) issue was found in the Linux kernel\u2019s smb2_ioctl_query_info function in the fs/cifs/smb2ops.c Common Internet File System (CIFS) due to an incorrect return from the memdup_user function. This flaw allows a local, privileged (CAP_SYS_ADMIN) attacker to crash the system.",
+            "Score": {
+              "CVSSv2": "N.A.",
+              "CVSSv3": 4.4
+            }
+          },
+          "CVE-2021-3772": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3772",
+            "Description": "A flaw was found in the Linux SCTP stack. A blind attacker may be able to kill an existing SCTP association through invalid chunks if the attacker knows the IP-addresses and port numbers being used and the attacker can send packets with spoofed IP addresses.",
+            "Score": {
+              "CVSSv2": 5.8,
+              "CVSSv3": 6.5
+            }
+          },
+          "CVE-2021-3744": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3744",
+            "Description": "A flaw was found in the Linux kernel. A memory leak in the ccp-ops crypto driver can allow attackers to cause a denial of service. This vulnerability is similar with the older CVE-2019-18808. The highest threat from this vulnerability is to system availability.",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2021-3640": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3640",
+            "Description": "A flaw use-after-free in function sco_sock_sendmsg() of the Linux kernel HCI subsystem was found in the way user calls ioct UFFDIO_REGISTER or other way triggers race condition of the call sco_conn_del() together with the call sco_sock_sendmsg() with the expected controllable faulting memory page. A privileged local user could use this flaw to crash the system or escalate their privileges on the system.",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": 7.0
+            }
+          },
+          "CVE-2020-35508": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35508",
+            "Description": "A flaw possibility of race condition and incorrect initialization of the process id was found in the Linux kernel child/parent process identification handling while filtering signal handlers. A local attacker is able to abuse this flaw to bypass checks to send any signal to a privileged process.",
+            "Score": {
+              "CVSSv2": 4.4,
+              "CVSSv3": 4.5
+            }
+          },
+          "CVE-2020-14331": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14331",
+            "Description": "A flaw was found in the Linux kernel\u2019s implementation of the invert video code on VGA consoles when a local attacker attempts to resize the console, calling an ioctl VT_RESIZE, which causes an out-of-bounds write to occur. This flaw allows a local user with access to the VGA console to crash the system, potentially escalating their privileges on the system. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 6.6
+            }
+          },
+          "CVE-2019-3901": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3901",
+            "Description": "A race condition in perf_event_open() allows local attackers to leak sensitive data from setuid programs. As no relevant locks (in particular the cred_guard_mutex) are held during the ptrace_may_access() call, it is possible for the specified target task to perform an execve() syscall with setuid execution before perf_event_alloc() actually attaches to it, allowing an attacker to bypass the ptrace_may_access() check and the perf_event_exit_task(current) call that is performed in install_exec_creds() during privileged execve() calls.",
+            "Score": {
+              "CVSSv2": 1.9,
+              "CVSSv3": 4.7
+            }
+          },
+          "CVE-2019-3900": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3900",
+            "Description": "An infinite loop issue was found in the vhost_net kernel module while handling incoming packets in handle_rx(). The infinite loop could occur if one end sends packets faster than the other end can process them. A guest user, maybe a remote one, could use this flaw to stall the vhost_net kernel thread, resulting in a DoS scenario.",
+            "Score": {
+              "CVSSv2": 6.8,
+              "CVSSv3": 7.7
+            }
+          },
+          "CVE-2019-14816": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14816",
+            "Description": "A vulnerability was found in the Linux kernel's Marvell WiFi chip driver. Where, while parsing vendor-specific informational attributes, an attacker on the same WiFi physical network segment could cause a system crash, resulting in a denial of service, or potentially execute arbitrary code. This flaw affects the network interface at the most basic level meaning the attacker only needs to affiliate with the same network device as the vulnerable system to create an attack path.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2019-14814": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14814",
+            "Description": "A flaw was found in the Linux kernel\u2019s implementation of the Marvell wifi driver, which can allow a local user who has CAP_NET_ADMIN or administrative privileges to possibly cause a Denial Of Service (DOS) by corrupting memory and possible code execution.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2018-1095": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1095",
+            "Description": "The Linux kernel is vulnerable to an out-of-bound access bug in the fs/posix_acl.c:get_acl() function. An attacker could trick a legitimate user or a privileged attacker could exploit this to cause a system crash or other unspecified impact with a crafted ext4 image. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although we believe it is unlikely.",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2018-1094": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1094",
+            "Description": "The Linux kernel is vulnerable to a NULL pointer dereference in the ext4/xattr.c:ext4_xattr_inode_hash() function. An attacker could trick a legitimate user or a privileged attacker could exploit this to cause a NULL pointer dereference with a crafted ext4 image.",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2018-1092": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1092",
+            "Description": "The Linux kernel is vulnerable to a NULL pointer dereference in the ext4/mballoc.c:ext4_process_freed_data() function. An attacker could trick a legitimate user or a privileged attacker could exploit this by mounting a crafted ext4 image to cause a kernel panic.",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2018-1065": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1065",
+            "Description": "A flaw was found in the netfilter/iptables subsystem. A user with the netfilter modification capabilities could insert a rule which could panic the system.",
+            "Score": {
+              "CVSSv2": 4.7,
+              "CVSSv3": 4.7
+            }
+          },
+          "CVE-2017-7542": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-7542",
+            "Description": "An integer overflow vulnerability in ip6_find_1stfragopt() function was found. A local attacker that has privileges (of CAP_NET_RAW) to open raw socket can cause an infinite loop inside the ip6_find_1stfragopt() function.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2017-7541": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-7541",
+            "Description": "Kernel memory corruption due to a buffer overflow was found in brcmf_cfg80211_mgmt_tx() function in Linux kernels from v3.9-rc1 to v4.13-rc1. The vulnerability can be triggered by sending a crafted NL80211_CMD_FRAME packet via netlink. This flaw is unlikely to be triggered remotely as certain userspace code is needed for this. An unprivileged local user could use this flaw to induce kernel memory corruption on the system, leading to a crash. Due to the nature of the flaw, privilege escalation cannot be fully ruled out, although it is unlikely.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2017-7495": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-7495",
+            "Description": "A vulnerability was found in the Linux kernel where filesystems mounted with data=ordered mode may allow an attacker to read stale data from recently allocated blocks in new files after a system 'reset' by abusing ext4 mechanics of delayed allocation.",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2017-2647": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-2647",
+            "Description": "A flaw was found that can be triggered in keyring_search_iterator in keyring.c if type->match is NULL. A local user could use this flaw to crash the system or, potentially, escalate their privileges.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2017-2596": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-2596",
+            "Description": "Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization(nVMX) feature enabled(nested=1), is vulnerable to host memory leakage issue. It could occur while emulating VMXON instruction in 'handle_vmon'. An L1 guest user could use this flaw to leak host memory potentially resulting in DoS.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 6.5
+            }
+          },
+          "CVE-2017-15127": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15127",
+            "Description": "A flaw was found in the Linux kernel when freeing pages in hugetlbfs. This could trigger a local denial of service by crashing the kernel.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2017-12188": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-12188",
+            "Description": "The Linux kernel built with the KVM visualization support (CONFIG_KVM), with nested visualization(nVMX) feature enabled (nested=1), was vulnerable to a stack buffer overflow issue. The vulnerability could occur while traversing guest page table entries to resolve guest virtual address(gva). An L1 guest could use this flaw to crash the host kernel resulting in denial of service (DoS) or potentially execute arbitrary code on the host to gain privileges on the system.",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2017-12168": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2017-12168",
+            "Description": "An assertion failure issue was found in the Linux kernel's KVM hypervisor module built to support visualization on ARM64 architecture platforms. The failure could occur while accessing Performance Monitors Cycle Count Register (PMCCNTR) from a guest. A privileged guest user could use this flaw to crash the host kernel resulting in denial of service.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 6.0
+            }
+          },
+          "CVE-2016-8650": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-8650",
+            "Description": "A flaw was found in the Linux kernel key management subsystem in which a local attacker could crash the kernel or corrupt the stack and additional memory (denial of service) by supplying a specially crafted RSA key. This flaw panics the machine during the verification of the RSA key.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2016-7097": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-7097",
+            "Description": "It was found that when file permissions were modified via chmod and the user modifying them was not in the owning group or capable of CAP_FSETID, the setgid bit would be cleared. Setting a POSIX ACL via setxattr sets the file permissions as well as the new ACL, but doesn't clear the setgid bit in a similar way. This could allow a local user to gain group privileges via certain setgid applications.",
+            "Score": {
+              "CVSSv2": 3.6,
+              "CVSSv3": 4.4
+            }
+          },
+          "CVE-2016-6828": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-6828",
+            "Description": "A use-after-free vulnerability was found in tcp_xmit_retransmit_queue and other tcp_* functions. This condition could allow an attacker to send an incorrect selective acknowledgment to existing connections, possibly resetting a connection.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2016-5412": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-5412",
+            "Description": "CVE-2016-5412 Kernel: powerpc: kvm: Infinite loop via H_CEDE hypercall when running under hypervisor-mode",
+            "Score": {
+              "CVSSv2": 4.6,
+              "CVSSv3": 6.5
+            }
+          },
+          "CVE-2016-4998": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-4998",
+            "Description": "An out-of-bounds heap memory access leading to a Denial of Service, heap disclosure, or further impact was found in setsockopt(). The function call is normally restricted to root, however some processes with cap_sys_admin may also be able to trigger this flaw in privileged container environments.",
+            "Score": {
+              "CVSSv2": 5.6,
+              "CVSSv3": 7.1
+            }
+          },
+          "CVE-2016-4470": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-4470",
+            "Description": "A flaw was found in the Linux kernel's keyring handling code: the key_reject_and_link() function could be forced to free an arbitrary memory block. An attacker could use this flaw to trigger a use-after-free condition on the system, potentially allowing for privilege escalation.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2016-3070": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-3070",
+            "Description": "A security flaw was found in the Linux kernel that an attempt to move page mapped by AIO ring buffer to the other node triggers NULL pointer dereference at trace_writeback_dirty_page(), because aio_fs_backing_dev_info.dev is 0.",
+            "Score": {
+              "CVSSv2": 4.6,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2016-10147": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2016-10147",
+            "Description": "Algorithms not compatible with mcryptd could be spawned by mcryptd with a direct crypto_alloc_tfm invocation using a \"mcryptd(alg)\" name construct. This causes mcryptd to crash the kernel if an arbitrary \"alg\" is incompatible and not intended to be used with mcryptd.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2015-8970": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-8970",
+            "Description": "The lrw_crypt() function in 'crypto/lrw.c' in the Linux kernel before 4.5 allows local users to cause a system crash and a denial of service by the NULL pointer dereference via accept(2) system call for AF_ALG socket without calling setkey() first to set a cipher key.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2015-5283": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-5283",
+            "Description": "A NULL pointer dereference flaw was found in the SCTP implementation. A local user could use this flaw to cause a denial of service on the system by triggering a kernel panic when creating multiple sockets in parallel while the system did not have the SCTP module loaded.",
+            "Score": {
+              "CVSSv2": 4.7,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2015-3288": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-3288",
+            "Description": "CVE-2015-3288 kernel: zero page memory arbitrary modification",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2015-3214": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-3214",
+            "Description": "An out-of-bounds memory access flaw, leading to memory corruption or possibly an information leak, was found in QEMU's pit_ioport_read() function. A privileged guest user in a QEMU guest, which had QEMU PIT emulation enabled, could potentially, in rare cases, use this flaw to execute arbitrary code on the host with the privileges of the hosting QEMU process.",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2015-3212": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-3212",
+            "Description": "A race condition flaw was found in the way the Linux kernel's SCTP implementation handled Address Configuration lists when performing Address Configuration Change (ASCONF). A local attacker could use this flaw to crash the system via a race condition triggered by setting certain ASCONF options on a socket.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2015-0239": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-0239",
+            "Description": "It was found that the Linux kernel KVM subsystem's sysenter instruction emulation was not sufficient. An unprivileged guest user could use this flaw to escalate their privileges by tricking the hypervisor to emulate a SYSENTER instruction in 16-bit mode, if the guest OS did not initialize the SYSENTER model-specific registers (MSRs). Note: Certified guest operating systems for Red Hat Enterprise Linux with KVM do initialize the SYSENTER MSRs and are thus not vulnerable to this issue when running on a KVM hypervisor.",
+            "Score": {
+              "CVSSv2": 4.4,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-9420": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-9420",
+            "Description": "It was found that the Linux kernel's ISO file system implementation did not correctly limit the traversal of Rock Ridge extension Continuation Entries (CE). An attacker with physical access to the system could use this flaw to trigger an infinite loop in the kernel, resulting in a denial of service.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-8173": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-8173",
+            "Description": "A NULL pointer dereference flaw was found in the way the Linux kernel's madvise MADV_WILLNEED functionality handled page table locking. A local, unprivileged user could use this flaw to crash the system.",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-8159": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-8159",
+            "Description": "It was found that the Linux kernel's Infiniband subsystem did not properly sanitize input parameters while registering memory regions from user space via the (u)verbs API. A local user with access to a /dev/infiniband/uverbsX device could use this flaw to crash the system or, potentially, escalate their privileges on the system.",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-7841": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-7841",
+            "Description": "A flaw was found in the way the Linux kernel's SCTP implementation validated INIT chunks when performing Address Configuration Change (ASCONF). A remote attacker could use this flaw to crash the system by sending a specially crafted SCTP packet to trigger a NULL pointer dereference on the system.",
+            "Score": {
+              "CVSSv2": 5.0,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-5077": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-5077",
+            "Description": "A NULL pointer dereference flaw was found in the way the Linux kernel's Stream Control Transmission Protocol (SCTP) implementation handled simultaneous connections between the same hosts. A remote attacker could use this flaw to crash the system.",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-3647": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-3647",
+            "Description": "A flaw was found in the way the Linux kernel's KVM subsystem handled non-canonical addresses when emulating instructions that change the RIP (for example, branches or calls). A guest user with access to an I/O or MMIO region could use this flaw to crash the guest.",
+            "Score": {
+              "CVSSv2": 1.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2014-3645": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-3645",
+            "Description": "It was found that the Linux kernel's KVM subsystem did not handle the VM exits gracefully for the invept (Invalidate Translations Derived from EPT) instructions. On hosts with an Intel processor and invept VM exit support, an unprivileged guest user could use these instructions to crash the guest.",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2014-3611": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-3611",
+            "Description": "A race condition flaw was found in the way the Linux kernel's KVM subsystem handled PIT (Programmable Interval Timer) emulation. A guest user who has access to the PIT I/O ports could use this flaw to crash the host.",
+            "Score": {
+              "CVSSv2": 4.7,
+              "CVSSv3": 4.7
+            }
+          },
+          "CVE-2014-3610": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-3610",
+            "Description": "It was found that KVM's Write to Model Specific Register (WRMSR) instruction emulation would write non-canonical values passed in by the guest to certain MSRs in the host's context. A privileged guest user could use this flaw to crash the host.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2014-0205": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2014-0205",
+            "Description": "A flaw was found in the way the Linux kernel's futex subsystem handled reference counting when requeuing futexes during futex_wait(). A local, unprivileged user could use this flaw to zero out the reference counter of an inode or an mm struct that backs up the memory area of the futex, which could lead to a use-after-free flaw, resulting in a system crash or, potentially, privilege escalation.",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-6431": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-6431",
+            "Description": "CVE-2013-6431 kernel: net: fib: fib6_add: potential NULL pointer dereference",
+            "Score": {
+              "CVSSv2": 4.7,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-6381": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-6381",
+            "Description": "CVE-2013-6381 Kernel: qeth: buffer overflow in snmp ioctl",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-4592": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4592",
+            "Description": "CVE-2013-4592 kernel: kvm: memory leak when memory slot is moved with assigned device",
+            "Score": {
+              "CVSSv2": 4.0,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-4348": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4348",
+            "Description": "CVE-2013-4348 kernel: net: deadloop path in skb_flow_dissect()",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-4345": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4345",
+            "Description": "CVE-2013-4345 kernel: ansi_cprng: off by one error in non-block size request",
+            "Score": {
+              "CVSSv2": 5.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-4312": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4312",
+            "Description": "It was found that the Linux kernel did not properly account file descriptors passed over the unix socket against the process limit. A local user could use this flaw to exhaust all available memory on the system.",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 6.2
+            }
+          },
+          "CVE-2022-1943": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1943",
+            "Description": "A flaw out of bounds memory write in the Linux kernel UDF file system functionality was found in the way user triggers some file operation which triggers udf_write_fi(). A local user could use this flaw to crash the system or potentially",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2015-5364": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2015-5364",
+            "Description": "The (1) udp_recvmsg and (2) udpv6_recvmsg functions in the Linux kernel before 4.0.6 do not properly consider yielding a processor, which allows remote attackers to cause a denial of service (system hang) via incorrect checksums within a UDP packet flood.",
+            "Score": {
+              "CVSSv2": 7.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2009-0029": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2009-0029",
+            "Description": "CVE-2009-0029 Linux Kernel insecure 64 bit system call argument passing",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2008-3832": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2008-3832",
+            "Description": "CVE-2008-3832 kernel: null pointer dereference in utrace_control",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-3301": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-3301",
+            "Description": "CVE-2013-3301 Kernel: tracing: NULL pointer dereference",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-2206": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-2206",
+            "Description": "CVE-2013-2206 kernel: sctp: duplicate cookie handling NULL pointer dereference",
+            "Score": {
+              "CVSSv2": 5.4,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-2148": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-2148",
+            "Description": "CVE-2013-2148 Kernel: fanotify: info leak in copy_event_to_user",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-2094": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-2094",
+            "Description": "CVE-2013-2094 kernel: perf_swevent_enabled array out-of-bound access",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-1943": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1943",
+            "Description": "CVE-2013-1943 kernel: kvm: missing check in kvm_set_memory_region()",
+            "Score": {
+              "CVSSv2": 4.4,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2013-1797": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1797",
+            "Description": "CVE-2013-1797 kernel: kvm: after free issue with the handling of MSR_KVM_SYSTEM_TIME",
+            "Score": {
+              "CVSSv2": 6.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-1774": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1774",
+            "Description": "CVE-2013-1774 Kernel: USB io_ti driver NULL pointer dereference in routine chase_port",
+            "Score": {
+              "CVSSv2": 4.0,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-1767": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1767",
+            "Description": "CVE-2013-1767 Kernel: tmpfs: fix use-after-free of mempolicy object",
+            "Score": {
+              "CVSSv2": 6.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-1763": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1763",
+            "Description": "CVE-2013-1763 kernel: sock_diag: out-of-bounds access to sock_diag_handlers[]",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2013-0290": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2013-0290",
+            "Description": "CVE-2013-0290 kernel: net: infinite loop in __skb_recv_datagram()",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-3510": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-3510",
+            "Description": "CVE-2012-3510 kernel: taskstats: use-after-free in xacct_add_tsk()",
+            "Score": {
+              "CVSSv2": 5.6,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2744": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2744",
+            "Description": "CVE-2012-2744 kernel: netfilter: null pointer dereference in nf_ct_frag6_reasm()",
+            "Score": {
+              "CVSSv2": 7.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2390": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2390",
+            "Description": "CVE-2012-2390 kernel: huge pages: memory leak on mmap failure",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2384": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2384",
+            "Description": "CVE-2012-2384 kernel: drm/i915: integer overflow in i915_gem_do_execbuffer()",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2383": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2383",
+            "Description": "CVE-2012-2383 kernel: drm/i915: integer overflow in i915_gem_execbuffer2()",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2319": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2319",
+            "Description": "CVE-2012-2319 kernel: Buffer overflow in the HFS plus filesystem (different issue than CVE-2009-4020)",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2136": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2136",
+            "Description": "CVE-2012-2136 kernel: net: insufficient data_len validation in sock_alloc_send_pskb()",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-2133": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-2133",
+            "Description": "CVE-2012-2133 kernel: use after free bug in \"quota\" handling",
+            "Score": {
+              "CVSSv2": 4.0,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-1583": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-1583",
+            "Description": "CVE-2012-1583 kernel: ipv6: panic using raw sockets",
+            "Score": {
+              "CVSSv2": 5.0,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2012-0044": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2012-0044",
+            "Description": "CVE-2012-0044 kernel: drm: integer overflow in drm_mode_dirtyfb_ioctl()",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": 7.8
+            }
+          },
+          "CVE-2011-4348": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-4348",
+            "Description": "CVE-2011-4348 kernel: incomplete fix for CVE-2011-2482",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2011-4326": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-4326",
+            "Description": "CVE-2011-4326 kernel: wrong headroom check in udp6_ufo_fragment()",
+            "Score": {
+              "CVSSv2": 7.1,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2011-4097": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-4097",
+            "Description": "CVE-2011-4097 kernel: oom_badness() integer overflow",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2011-4081": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-4081",
+            "Description": "CVE-2011-4081 kernel: crypto: ghash: null pointer deref if no key is set",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2011-2497": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-2497",
+            "Description": "CVE-2011-2497 kernel: bluetooth: buffer overflow in l2cap config request",
+            "Score": {
+              "CVSSv2": 8.3,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2011-1770": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-1770",
+            "Description": "CVE-2011-1770 kernel: dccp: handle invalid feature options length",
+            "Score": {
+              "CVSSv2": 7.8,
+              "CVSSv3": 7.5
+            }
+          },
+          "CVE-2011-1494": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-1494",
+            "Description": "CVE-2011-1494 CVE-2011-1495 kernel: drivers/scsi/mpt2sas: prevent heap overflows",
+            "Score": {
+              "CVSSv2": 6.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2011-1093": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2011-1093",
+            "Description": "CVE-2011-1093 kernel: dccp: fix oops on Reset after close",
+            "Score": {
+              "CVSSv2": 7.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-4162": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-4162",
+            "Description": "CVE-2010-4162 kernel: bio: integer overflow page count when mapping/copying user data",
+            "Score": {
+              "CVSSv2": 4.7,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-4157": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-4157",
+            "Description": "CVE-2010-4157 kernel: gdth: integer overflow in ioc_general()",
+            "Score": {
+              "CVSSv2": 6.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3865": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3865",
+            "Description": "CVE-2010-3865 kernel: iovec integer overflow in net/rds/rdma.c",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3705": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3705",
+            "Description": "CVE-2010-3705 kernel: sctp memory corruption in HMAC handling",
+            "Score": {
+              "CVSSv2": 8.3,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3432": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3432",
+            "Description": "CVE-2010-3432 kernel: sctp: do not reset the packet during sctp_packet_config",
+            "Score": {
+              "CVSSv2": 7.8,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3301": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3301",
+            "Description": "CVE-2010-3301 kernel: IA32 System Call Entry Point Vulnerability",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3084": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3084",
+            "Description": "CVE-2010-3084 kernel: niu: buffer overflow for ETHTOOL_GRXCLSRLALL",
+            "Score": {
+              "CVSSv2": 7.2,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-3078": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-3078",
+            "Description": "CVE-2010-3078 kernel: xfs: XFS_IOC_FSGETXATTR ioctl memory leak",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": 5.5
+            }
+          },
+          "CVE-2010-2954": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-2954",
+            "Description": "CVE-2010-2954 kernel: NULL deref and panic in irda",
+            "Score": {
+              "CVSSv2": 4.9,
+              "CVSSv3": "N.A."
+            }
+          },
+          "CVE-2010-2942": {
+            "NIST_URL": "https://nvd.nist.gov/vuln/detail/CVE-2010-2942",
+            "Description": "CVE-2010-2942 kernel: net sched: fix some kernel memory leaks",
+            "Score": {
+              "CVSSv2": 2.1,
+              "CVSSv3": 5.5
+            }
+          }
+        },
+        "Details": "WAP: Linux, Linux(2.4.X)"
       }
     },
     "Summary of vulnerabilities found": {
-      "os": 0,
-      "tcp": 0,
-      "udp": 0
+      "os": 100,
+      "tcp": 0
     }
   }
 }
